@@ -105,9 +105,15 @@ cypress/README
 
 
 #Instalar Node e NPM
+
 #Instalar as dependencias do projeto: npm i
+
 #Abrir o cypress: npm run open
+
 #Limpar relatórios: npm run clean_reports
+
 #Limpar screenshots: npm run clean_screenshots
+
 #Limpar vídeos: npm run clean_videos
+
 #Limpar relatórios, screenshots e vídeos: npm run clean_all
