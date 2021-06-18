@@ -1,0 +1,22 @@
+{
+  "projectId": "projeto_base",
+  "reporter": "cypress-multi-reporters",
+  "reporterOptions": {
+      "reportDir": "cypress/reports",
+      "reportFilename": "Relatório-Testes-Desafio-QA_PicPay",
+      "reportName": "Relatório - Desafio QA PicPay",
+      "reportTitle": "Relatório de Testes - Desafio QA PicPay",
+      "reportPageTitle": "Título da Página",
+      "takePassedScreenshot": false,
+      "clearOldScreenshots": false,
+      "shortScrFileNames": false,
+      "inline": true,
+      "charts": true,
+      "autoOpen": false,
+      "jsonReport": true,
+      "multiReport": true,
+      "timestamp": "dd-mm-yyyy_HH-MM-ss",
+      "capture": "runner"
+  }
+  
+}

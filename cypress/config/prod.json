@@ -1,0 +1,13 @@
+{
+    "env": {
+        "url": "<url_ui_prod>",
+        "url_api": "<url_api_prod>",
+        "db": {
+            "user": "",
+            "password": "",
+            "host": "",
+            "port": "",
+            "database": ""
+          }
+    }
+}

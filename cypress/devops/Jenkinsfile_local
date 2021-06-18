@@ -1,0 +1,57 @@
+pipeline {
+   agent { any {reuseNode true} }
+  
+    environment {
+        PROJECT_NAME="projeto_base_gui_api_tests"
+        CYPRESS_CACHE_FOLDER ="/home/jenkins/.cache/Cypress"
+       
+    }
+
+    
+    options {
+        timeout(time: 80, unit: 'MINUTES')
+    }
+
+  stages {
+
+   stage('Get env') {
+      steps {
+        parallel(
+          'Set environment': {
+            script {
+              env.PREVIOUS = env.BUILD_NUMBER - 1
+              env.DOCKER_BUILD_TAG = "$PROJECT_NAME"
+            }
+          },
+        )
+      }
+    }
+    stage('Get cache') {
+      steps {
+        sh '''
+          docker pull $DOCKER_PREVIUS_BUILD_TAG || echo "Docker pull fail"
+        '''
+      }
+    }
+    stage('Build') {
+      steps {
+        sh """
+          docker build -t $DOCKER_BUILD_TAG . -f Dockerfile
+        """
+      }
+    }
+    stage('Tests run - API') {
+       steps {
+       
+         sh """
+           docker run --rm --network host \
+           -i $DOCKER_BUILD_TAG \
+           npm run test_api_all
+         """     
+      }
+    }
+  
+  }
+}
+
+

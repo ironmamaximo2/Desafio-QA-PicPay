@@ -1,0 +1,16 @@
+{
+    "env": {
+        "url": "url_ui_local",
+        "url_api": "https://gorest.co.in/public-api/",
+        "url_api2": "<url_api_prod_local>",
+        "email": "",
+        "password": "",
+        "db": {
+            "user": "",
+            "password": "",
+            "host": "",
+            "port": "",
+            "database": ""
+          }
+    }
+}
