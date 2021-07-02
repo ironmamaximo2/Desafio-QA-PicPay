@@ -1,4 +1,4 @@
-#Desafio_PicPay_QA
+#Teste_Api_Cypress
 
 #1-Introdução ao Projeto;
 Teste referente a oportunidade de QA na Empresa PicPay
